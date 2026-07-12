@@ -10,16 +10,16 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'SHEALTH — Komunitas Kesehatan',
+    default: 'SHEALTH',
     template: '%s | SHEALTH',
   },
   description:
-    'SHEALTH adalah komunitas kesehatan yang mengedukasi dan menginspirasi masyarakat untuk hidup lebih sehat.',
+    'SHEalth.id is a women based community for those who are passionate about living a healthier and more balanced life.',
   keywords: ['shealth', 'komunitas kesehatan', 'event kesehatan', 'she activity'],
   authors: [{ name: 'SHEALTH Team' }],
   openGraph: {
-    title: 'SHEALTH — Komunitas Kesehatan',
-    description: 'Komunitas kesehatan yang mengedukasi dan menginspirasi.',
+    title: 'SHEALTH — Community',
+    description: 'Woman Community',
     type: 'website',
   },
 };
