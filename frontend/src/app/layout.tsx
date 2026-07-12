@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'SHEALTH',
+    default: 'SHEALTH — Community',
     template: '%s | SHEALTH',
   },
   description:
