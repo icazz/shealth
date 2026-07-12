@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id              String   @id @default(cuid())
+  title           String
+  slug            String   @unique  // contoh: "she-activity-1"
+  description     String?
+  date            DateTime
+  location        String
+  maxParticipants Int?
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  registrations   Registration[]
+
+  @@map("events")
+}
+
+model Registration {
+  id          String   @id @default(cuid())
+  eventId     String
+  fullName    String
+  email       String
+  phone       String
+  institution String?
+  notes       String?
+  createdAt   DateTime @default(now())
+
+  event       Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, email])  // satu email hanya bisa daftar sekali per event
+  @@map("registrations")
+}
