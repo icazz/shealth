@@ -1,5 +1,6 @@
 # SHEALTH — Community Health Website
 
+🌐 **Live Website:** [https://shealth-community.vercel.app/](https://shealth-community.vercel.app/)
 Website komunitas SHEALTH yang terdiri dari:
 - **Community Profile** — Landing page utama
 - **Coming Soon** — Halaman sementara sebelum landing page selesai  
